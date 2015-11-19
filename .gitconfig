@@ -2,11 +2,23 @@
 	name = Wesley Detweiler
 	email = wes.detweiler@gmail.com
 [merge]
-	tool = kdiff3
+	tool = DiffMerge
 [diff]
-	guitool = kdiff3
+	guitool = diffuse
 [core]
 	editor = \"C:/Program Files (x86)/GitExtensions/GitExtensions.exe\" fileeditor
 	autocrlf = True
 [credential]
 	helper = !\"C:\\Program Files (x86)\\GitExtensions\\GitCredentialWinStore\\git-credential-winstore.exe\"
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	unstage = reset HEAD --
+	last = log -1 HEAD
+[mergetool "DiffMerge"]
+	path = C:/Program Files/SourceGear/Common/DiffMerge/DiffMerge.exe
+	cmd = \"C:/Program Files/SourceGear/Common/DiffMerge/DiffMerge.exe\" /m /r=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
+[difftool "diffuse"]
+	path = C:/Program Files (x86)/Diffuse/diffuse.exe
