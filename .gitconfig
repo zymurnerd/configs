@@ -1,63 +1,12 @@
 [user]
 	name = Wesley Detweiler
-	email = wesley.detweiler@garmin.com
-[core]
-	editor = \"C:/Program Files (x86)/Notepad++/notepad++.exe\" -multiInst -notabbar -nosession -noPlugin
-[push]
-	default = tracking
-	recurseSubmodules = check
-[fetch]
-	recurseSubmodules = on-demand
-[i18n]
-	filesEncoding = utf-8
-[diff]
-	tool = bc3
-	guitool = beyondcompare3
-[difftool]
-	prompt = false
+	email = wes.detweiler@gmail.com
 [merge]
-	tool = BeyondCompare3
-[color]
-	ui = true
-[branch "master"]
-	rebase = true
-[difftool "bc3"]
-	path = C:/Program Files (x86)/Beyond Compare 3/bcomp.exe
-	cmd = \"C:/Program Files (x86)/Beyond Compare 3/bcomp.exe\" \"$LOCAL\" \"$REMOTE\" \"/leftreadonly\"
-	keepBackup = false
-[mergetool "bc3"]
-	path = C:/Program Files (x86)/Beyond Compare 3/bcomp.exe
-	cmd = \"C:/Program Files (x86)/Beyond Compare 3/bcomp.exe\" \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\" \"/solo\"
-	trustExitCode = true
-[difftool "bc2"]
-	path = C:/Program Files (x86)/Beyond Compare 2/bc2.exe
-	cmd = \"C:/Program Files (x86)/Beyond Compare 2/bc2.exe\" \"$LOCAL\" \"$REMOTE\" \"/leftreadonly\"
-	keepBackup = false
-[mergetool "p4merge"]
-	path = C:/Program Files (x86)/Perforce/p4merge.exe
-	cmd = \"C:/Program Files (x86)/Perforce/p4merge.exe\" \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
-	trustExitCode = true
-[alias]
-	co = checkout
-	br = branch
-	ci = commit
-	st = status
-	unstage = reset HEAD --
-	last = log -1 HEAD
-[sendemail]
-	identity = garmin
-	chainreplyto = false
-[sendemail "garmin"]
-	confirm = auto
-	smtpserver = smtp.garmin.com
-	from = \"Detweiler, Wesley\" <wesley.detweiler@garmin.com>
-[mergetool "BeyondCompare3"]
-	path = C:/Program Files (x86)/Beyond Compare 3/bcomp.exe
-	cmd = \"C:/Program Files (x86)/Beyond Compare 3/bcomp.exe\" \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
-[difftool "BeyondCompare3"]
-	path = C:/Program Files (x86)/Beyond Compare 3/bcomp.exe
-[difftool "beyondcompare3"]
-	path = C:/Program Files (x86)/Beyond Compare 3/BComp.exe
-	cmd = \"C:/Program Files (x86)/Beyond Compare 3/BComp.exe\" \"$LOCAL\" \"$REMOTE\"
-[http]
-	proxy = http://proxy.garmin.com:3128
+	tool = kdiff3
+[diff]
+	guitool = kdiff3
+[core]
+	editor = \"C:/Program Files (x86)/GitExtensions/GitExtensions.exe\" fileeditor
+	autocrlf = True
+[credential]
+	helper = !\"C:\\Program Files (x86)\\GitExtensions\\GitCredentialWinStore\\git-credential-winstore.exe\"

@@ -5,7 +5,7 @@
 # with this software. 
 # If not, see <http://creativecommons.org/publicdomain/zero/1.0/>. 
 
-# base-files version 4.1-1
+# base-files version 4.2-3
 
 # ~/.bashrc: executed by bash(1) for interactive shells.
 
@@ -28,8 +28,6 @@
 
 # Shell Options
 #
-
-# export PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \w\[\033[01;33m\]$(__git_ps1)\[\033[01;34m\] \r\n\$\[\033[00m\] '
 # See man bash for more options...
 #
 # Don't wait for job termination notification
@@ -63,7 +61,7 @@
 #
 # Uncomment to turn on programmable completion enhancements.
 # Any completions you add in ~/.bash_completion are sourced last.
-[[ -f /etc/bash_completion ]] && . /etc/bash_completion
+# [[ -f /etc/bash_completion ]] && . /etc/bash_completion
 
 # History Options
 #
@@ -98,28 +96,24 @@
 # alias mv='mv -i'
 #
 # Default to human readable figures
-alias df='df -h'
-alias du='du -h'
+# alias df='df -h'
+# alias du='du -h'
 #
 # Misc :)
-alias less='less -r'                          # raw control characters
-alias whence='type -a'                        # where, of a sort
-alias grep='grep --color'                     # show differences in colour
-alias egrep='egrep --color=auto'              # show differences in colour
-alias fgrep='fgrep --color=auto'              # show differences in colour
+# alias less='less -r'                          # raw control characters
+# alias whence='type -a'                        # where, of a sort
+# alias grep='grep --color'                     # show differences in colour
+# alias egrep='egrep --color=auto'              # show differences in colour
+# alias fgrep='fgrep --color=auto'              # show differences in colour
 #
 # Some shortcuts for different directory listings
-alias ls='ls -F --color'
-#alias ls='ls -F --color=tty'                 # classify files in colour
-alias dir='ls --color=auto --format=vertical'
-alias vdir='ls --color=auto --format=long'
-alias ll='ls -l'                              # long list
-alias la='ls -Al'                              # all but . and ..
-alias l='ls -CF'                              #
-alias lh='ls -lh'
+ alias ls='ls -hF --color=tty'                 # classify files in colour
+ alias dir='ls --color=auto --format=vertical'
+ alias vdir='ls --color=auto --format=long'
+ alias ll='ls -Al'                              # long list
+ alias la='ls -al'                              # all but . and ..
+ alias l='ls -CF'                              #
 
-# source ~/git-completion.bash
-# source ~/git-prompt.sh
 # Umask
 #
 # /etc/profile sets 022, removing write perms to group + others.
@@ -202,52 +196,3 @@ alias lh='ls -lh'
 # }
 # 
 # alias cd=cd_func
-
-# Note: ~/.ssh/environment should not be used, as it
-#       already has a different purpose in SSH.
-
-env=~/.ssh/agent.env
-
-# Note: Don't bother checking SSH_AGENT_PID. It's not used
-#       by SSH itself, and it might even be incorrect
-#       (for example, when using agent-forwarding over SSH).
-
-agent_is_running() {
-    if [ "$SSH_AUTH_SOCK" ]; then
-        # ssh-add returns:
-        #   0 = agent running, has keys
-        #   1 = agent running, no keys
-        #   2 = agent not running
-        ssh-add -l >/dev/null 2>&1 || [ $? -eq 1 ]
-    else
-        false
-    fi
-}
-
-agent_has_keys() {
-    ssh-add -l >/dev/null 2>&1
-}
-
-agent_load_env() {
-    . "$env" >/dev/null
-}
-
-agent_start() {
-    (umask 077; ssh-agent >"$env")
-    . "$env" >/dev/null
-}
-
-if ! agent_is_running; then
-    agent_load_env
-fi
-
-# if your keys are not stored in ~/.ssh/id_rsa or ~/.ssh/id_dsa, you'll need
-# to paste the proper path after ssh-add
-if ! agent_is_running; then
-    agent_start
-    ssh-add
-elif ! agent_has_keys; then
-    ssh-add
-fi
-
-unset env
