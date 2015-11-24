@@ -31,7 +31,7 @@
 
 # export PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \w\[\033[01;33m\]$(__git_ps1)\[\033[01;34m\] \r\n\$\[\033[00m\] '
 #export PS1='\[\e]0;\w\a\]\n\[\e[1;31m\]\u@\h \[\e[32m\]\w\[\e[0m\]\n\$'
-export PS1='[\@]\u@\h:\w\$'
+export PS1='\u@\h:\w\n\$'
 
 # See man bash for more options...
 #
