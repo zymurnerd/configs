@@ -101,7 +101,7 @@ On_IPurple='\e[0;105m'  # Purple
 On_ICyan='\e[0;106m'    # Cyan
 On_IWhite='\e[0;107m'   # White
 
-export PS1='\[\e[00;94m\]\u@\h:\[\e[01;33m\]\w\[\e[0m\n\$'
+export PS1='\[\e[00;94m\]\u@\h:\[\e[01;33m\]\w\[\e[0m\n\$ '
 
 # See man bash for more options...
 #
@@ -186,8 +186,8 @@ alias ls='ls -F --color'
 #alias ls='ls -F --color=tty'                 # classify files in colour
 alias dir='ls --color=auto --format=vertical'
 alias vdir='ls --color=auto --format=long'
-alias ll='ls -l'                              # long list
-alias la='ls -Al'                              # all but . and ..
+alias ll='ls -al'                             # long list
+alias la='ls -Al'                             # all but . and ..
 alias l='ls -CF'                              #
 alias lh='ls -lh'
 
