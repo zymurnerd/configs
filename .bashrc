@@ -26,6 +26,14 @@
 # If not running interactively, don't do anything
 [[ "$-" != *i* ]] && return
 
+
+# Sources
+
+# source ~/git-completion.bash
+# source ~/git-prompt.sh
+source ~/configs/git-prompt.sh
+
+
 # Shell Options
 #
 # Reset
@@ -101,7 +109,7 @@ On_IPurple='\e[0;105m'  # Purple
 On_ICyan='\e[0;106m'    # Cyan
 On_IWhite='\e[0;107m'   # White
 
-export PS1="\[$BIBlue\]\u\[$White\]@\[$Yellow\]\h\[$White\]:\[$Purple\]\w\[$Color_Off\n\$ "
+export PS1="\[$BIBlue\]\u\[$White\]@\[$Yellow\]\h\[$White\]:\[$Purple\]\w\[$Cyan\]\$(__git_ps1 '(%s)') \[$Color_Off\n\$ "
 
 # See man bash for more options...
 #
@@ -191,8 +199,6 @@ alias la='ls -Al'                             # all but . and ..
 alias l='ls -CF'                              #
 alias lh='ls -lh'
 
-# source ~/git-completion.bash
-# source ~/git-prompt.sh
 # Umask
 #
 # /etc/profile sets 022, removing write perms to group + others.
