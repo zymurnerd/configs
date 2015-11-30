@@ -101,7 +101,7 @@ On_IPurple='\e[0;105m'  # Purple
 On_ICyan='\e[0;106m'    # Cyan
 On_IWhite='\e[0;107m'   # White
 
-export PS1='\[\e[00;94m\]\u@\h:\[\e[01;33m\]\w\[\e[0m\n\$ '
+export PS1="\[$BIBlue\]\u\[$White\]@\[$Yellow\]\h\[$White\]:\[$Purple\]\w\[$Color_Off\n\$ "
 
 # See man bash for more options...
 #
