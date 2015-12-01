@@ -330,3 +330,8 @@ elif ! agent_has_keys; then
 fi
 
 unset env
+
+# Local local configs
+if [ -f $HOME/.bashrc_local ]; then
+    . $HOME/.bashrc_local
+fi
