@@ -65,6 +65,8 @@ set scrolloff=4                 " start scrolling before edge is reached
 set showcmd                     " show incomplete commands on bottom
 set showmode                    " show current mode on bottom
 " set spell spelllang=en_us       " enable spell checking by default
+set background=dark
+colorscheme default
 
 " For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries
 " let &guioptions = substitute(&guioptions, "t", "", "g")
