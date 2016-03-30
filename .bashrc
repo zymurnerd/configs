@@ -183,6 +183,8 @@ alias df='df -h'
 alias du='du -h'
 #
 # Misc :)
+alias cls='printf "\033c"'                    # clear the terminal
+alias clear='cls'
 alias less='less -r'                          # raw control characters
 alias whence='type -a'                        # where, of a sort
 alias grep='grep --color'                     # show differences in colour
