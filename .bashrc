@@ -203,6 +203,7 @@ alias lh='ls -lh'
 
 # git alias
 alias gst='git status'
+alias gf='git fetch'
 alias gl='git pull'
 alias gp='git push'
 alias gd='git diff | mate'
