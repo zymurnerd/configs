@@ -217,6 +217,7 @@ alias gco='git checkout'
 alias gcob='git checkout -b'
 alias glog='git log'
 alias glogp='git log --pretty=format:"%h %s" --graph'
+alias gsu='git submodule update --init --recursive'
 alias grhard='git reset --hard'
 
 # Umask
