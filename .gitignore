@@ -1,7 +1,24 @@
+# IDE
+#--------------------------------------
+# pycharm files
 .idea/
 
+# sublime
 *.sublime-project
 *.sublime-workspace
+
+# vscode
+*.vscode
+
+# Executables
+#--------------------------------------
 *.exe
 
-*.vscode
+# Binary files
+#--------------------------------------
+*.img
+
+# System Files
+#--------------------------------------
+# windows
+*.ini
