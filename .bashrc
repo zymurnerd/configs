@@ -109,7 +109,7 @@ On_IPurple='\e[0;105m'  # Purple
 On_ICyan='\e[0;106m'    # Cyan
 On_IWhite='\e[0;107m'   # White
 
-export PS1="\[$BIBlue\]\u\[$White\]@\[$Yellow\]\h\[$White\]:\[$Purple\]\w\[$Cyan\]\$(__git_ps1 '(%s)') \[$Color_Off\n\$ "
+export PS1="\[$BIBlue\]\u\[$White\]@\[$Yellow\]\h\[$White\]:\[$Purple\]\w\[$Cyan\]\$(__git_ps1 '(%s)') \[$Color_Off"$'\n\$ '
 
 # See man bash for more options...
 #
@@ -190,6 +190,7 @@ alias whence='type -a'                        # where, of a sort
 alias grep='grep --color'                     # show differences in colour
 alias egrep='egrep --color=auto'              # show differences in colour
 alias fgrep='fgrep --color=auto'              # show differences in colour
+alias egpy='egrep -r -n -i --include=*.py'    # common grep for pythong files
 #
 # Some shortcuts for different directory listings
 alias ls='ls -F --color'
