@@ -190,7 +190,10 @@ alias whence='type -a'                        # where, of a sort
 alias grep='grep --color'                     # show differences in colour
 alias egrep='egrep --color=auto'              # show differences in colour
 alias fgrep='fgrep --color=auto'              # show differences in colour
-alias egpy='egrep -r -n -i --include=*.py'    # common grep for pythong files
+alias eg='egrep -r -n -i'                     # common egrep flags
+alias egpy='egrep -r -n -i --include=*.py'    # common egrep for python files
+alias findfn='find . -type f -name'           # recursive find file by name
+alias finddn='find . -type d -name'           # recursive find dir by name
 #
 # Some shortcuts for different directory listings
 alias ls='ls -F --color'
