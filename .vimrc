@@ -23,6 +23,10 @@ set lazyredraw 				" redraw only when we need to
 
 set incsearch				" search as characters are entered
 set hlsearch				" hightlight search matches
+
+
+set noswapfile
+
 " let mapleader=","
 " nnoremap <leader><space> :noh
 
