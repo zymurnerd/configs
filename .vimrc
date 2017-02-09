@@ -1,5 +1,5 @@
 " Colors
-colorscheme default			" color scheme
+colorscheme badwolf			" color scheme
 "colorscheme molokai			" color scheme
 syntax enable				" enable syntax processing. duh.
 
@@ -12,6 +12,7 @@ set autoindent
 
 " UI Config
 set number				    " show line numbers
+set relativenumber
 set cursorline				" highlight current line
 
 set showcmd				    " show command in bottom bar. possibly replace with plugin powerline
@@ -41,6 +42,19 @@ set noswapfile
 " set foldenable				" enable folding
 " set foldlevelstart=10		" open most folds by default 0-99
 " set foldnestmax=10			" 10 nested fold max
+"
+"
+
+" Functions
+function! NumberToggle()
+    if(&relativenumber == 1)
+        set norelativenumber
+    else
+        set relativenumber
+    endif
+endfunc
+
+nnoremap <C-n> :call NumberToggle()<cr>
 
 
 
