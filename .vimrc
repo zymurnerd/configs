@@ -1,14 +1,16 @@
+execute pathogen#infect()
+
 " Colors
 colorscheme badwolf			" color scheme
-"colorscheme molokai			" color scheme
-syntax enable				" enable syntax processing. duh.
+"colorscheme molokai		" color scheme
+syntax on				    " enable syntax processing. duh.
 
 " Spacing and Tabs
 set tabstop=4				" number of visual spaces per TAB
 set softtabstop=4			" number of visual spaces inserted per TAB
 set expandtab				" tabs to spaces
 set autoindent
-"filetype indent on			" load filetype-specific indent files
+filetype plugin indent on	" load filetype-specific indent files
 
 " UI Config
 set number				    " show line numbers
@@ -39,9 +41,9 @@ set noswapfile
 
 " Folding
 " TODO: figure out folding or get a plugin to do it
-" set foldenable				" enable folding
+" set foldenable			" enable folding
 " set foldlevelstart=10		" open most folds by default 0-99
-" set foldnestmax=10			" 10 nested fold max
+" set foldnestmax=10		" 10 nested fold max
 "
 "
 
