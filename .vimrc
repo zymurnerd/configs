@@ -1,3 +1,5 @@
+set runtimepath+=~/.vim
+
 execute pathogen#infect()
 
 " Colors
@@ -16,6 +18,10 @@ filetype plugin indent on	" load filetype-specific indent files
 set number				    " show line numbers
 set relativenumber
 set cursorline				" highlight current line
+
+if has('gui_running')
+    set guifont=Bitstream_Vera_Sans_Mono:h10
+endif
 
 set showcmd				    " show command in bottom bar. possibly replace with plugin powerline
 set wildmenu				" visual autocomplete for command menu
