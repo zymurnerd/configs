@@ -15,10 +15,11 @@ set autoindent
 filetype plugin indent on	" load filetype-specific indent files
 
 " UI Config
-let &t_ti.="\e[1 q"
+let &t_ti.="\e[1 q"         " these four lines make a block cursor in vim command mode
 let &t_SI.="\e[5 q"
 let &t_EI.="\e[1 q"
 let &t_te.="\e[0 q"
+
 set number				    " show line numbers
 set relativenumber
 set cursorline				" highlight current line
