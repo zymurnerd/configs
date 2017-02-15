@@ -3,8 +3,9 @@ set runtimepath+=~/.vim
 execute pathogen#infect()
 
 " Colors
-colorscheme badwolf			" color scheme
-"colorscheme molokai		" color scheme
+"colorscheme badwolf		" color scheme
+colorscheme molokai		    " color scheme
+
 syntax on				    " enable syntax processing. duh.
 
 " Spacing and Tabs

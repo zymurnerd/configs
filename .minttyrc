@@ -10,8 +10,8 @@ BoldAsColour=no
 AllowBlinking=no
 Term=xterm-256color
 
-ForegroundColour=248,248,242
-BackgroundColour=21,21,21
+#ForegroundColour=248,248,242
+#BackgroundColour=21,21,21
 CursorColour=253,157,79
 Black=21,21,21
 BoldBlack=80,80,80
