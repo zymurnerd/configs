@@ -111,6 +111,8 @@ On_IWhite='\e[0;107m'   # White
 
 export PS1="\[$BIBlue\]\u\[$White\]@\[$Yellow\]\h\[$White\]:\[$Purple\]\w\[$Cyan\]\$(__git_ps1 '(%s)') \[$Color_Off"$'\n\$ '
 
+LS_COLORS='di=4;40;33'
+export LS_COLORS
 # See man bash for more options...
 #
 # Don't wait for job termination notification
