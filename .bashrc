@@ -1,9 +1,9 @@
-# To the extent possible under law, the author(s) have dedicated all 
-# copyright and related and neighboring rights to this software to the 
-# public domain worldwide. This software is distributed without any warranty. 
-# You should have received a copy of the CC0 Public Domain Dedication along 
-# with this software. 
-# If not, see <http://creativecommons.org/publicdomain/zero/1.0/>. 
+# To the extent possible under law, the author(s) have dedicated all
+# copyright and related and neighboring rights to this software to the
+# public domain worldwide. This software is distributed without any warranty.
+# You should have received a copy of the CC0 Public Domain Dedication along
+# with this software.
+# If not, see <http://creativecommons.org/publicdomain/zero/1.0/>.
 
 # base-files version 4.2-3
 
@@ -36,87 +36,176 @@ source ~/configs/git-prompt.sh
 
 # Shell Options
 #
-# Reset
-Color_Off='\e[0m'       # Text Reset
+# # Reset
+# Color_Off='\e[0m'       # Text Reset
+#
+# # Regular Colors
+# Black='\e[0;30m'        # Black
+# Red='\e[0;31m'          # Red
+# Green='\e[0;32m'        # Green
+# Yellow='\e[0;33m'       # Yellow
+# Blue='\e[0;34m'         # Blue
+# Purple='\e[0;35m'       # Purple
+# Cyan='\e[0;36m'         # Cyan
+# White='\e[0;37m'        # White
+#
+# # Bold
+# Bold='\e[1m'            # Bold
+# BBlack='\e[1;30m'       # Black
+# BRed='\e[1;31m'         # Red
+# BGreen='\e[1;32m'       # Green
+# BYellow='\e[1;33m'      # Yellow
+# BBlue='\e[1;34m'        # Blue
+# BPurple='\e[1;35m'      # Purple
+# BCyan='\e[1;36m'        # Cyan
+# BWhite='\e[1;37m'       # White
+#
+# # Underline
+# UBlack='\e[4;30m'       # Black
+# URed='\e[4;31m'         # Red
+# UGreen='\e[4;32m'       # Green
+# UYellow='\e[4;33m'      # Yellow
+# UBlue='\e[4;34m'        # Blue
+# UPurple='\e[4;35m'      # Purple
+# UCyan='\e[4;36m'        # Cyan
+# UWhite='\e[4;37m'       # White
+#
+# # Background
+# On_Black='\e[40m'       # Black
+# On_Red='\e[41m'         # Red
+# On_Green='\e[42m'       # Green
+# On_Yellow='\e[43m'      # Yellow
+# On_Blue='\e[44m'        # Blue
+# On_Purple='\e[45m'      # Purple
+# On_Cyan='\e[46m'        # Cyan
+# On_White='\e[47m'       # White
+#
+# # High Intensity
+# IBlack='\e[0;90m'       # Black
+# IRed='\e[0;91m'         # Red
+# IGreen='\e[0;92m'       # Green
+# IYellow='\e[0;93m'      # Yellow
+# IBlue='\e[0;94m'        # Blue
+# IPurple='\e[0;95m'      # Purple
+# ICyan='\e[0;96m'        # Cyan
+# IWhite='\e[0;97m'       # White
+#
+# # Bold High Intensity
+# BIBlack='\e[1;90m'      # Black
+# BIRed='\e[1;91m'        # Red
+# BIGreen='\e[1;92m'      # Green
+# BIYellow='\e[1;93m'     # Yellow
+# BIBlue='\e[1;94m'       # Blue
+# BIPurple='\e[1;95m'     # Purple
+# BICyan='\e[1;96m'       # Cyan
+# BIWhite='\e[1;97m'      # White
+#
+# # High Intensity backgrounds
+# On_IBlack='\e[0;100m'   # Black
+# On_IRed='\e[0;101m'     # Red
+# On_IGreen='\e[0;102m'   # Green
+# On_IYellow='\e[0;103m'  # Yellow
+# On_IBlue='\e[0;104m'    # Blue
+# On_IPurple='\e[0;105m'  # Purple
+# On_ICyan='\e[0;106m'    # Cyan
+# On_IWhite='\e[0;107m'   # White
 
-# Regular Colors
-Black='\e[0;30m'        # Black
-Red='\e[0;31m'          # Red
-Green='\e[0;32m'        # Green
-Yellow='\e[0;33m'       # Yellow
-Blue='\e[0;34m'         # Blue
-Purple='\e[0;35m'       # Purple
-Cyan='\e[0;36m'         # Cyan
-White='\e[0;37m'        # White
 
-# Bold
-BBlack='\e[1;30m'       # Black
-BRed='\e[1;31m'         # Red
-BGreen='\e[1;32m'       # Green
-BYellow='\e[1;33m'      # Yellow
-BBlue='\e[1;34m'        # Blue
-BPurple='\e[1;35m'      # Purple
-BCyan='\e[1;36m'        # Cyan
-BWhite='\e[1;37m'       # White
+# Effects
+Default='0'
+Bold='1'
+Underline='4'
+Flashing='5'
+Reverse='7'
+Concealed='8'
 
-# Underline
-UBlack='\e[4;30m'       # Black
-URed='\e[4;31m'         # Red
-UGreen='\e[4;32m'       # Green
-UYellow='\e[4;33m'      # Yellow
-UBlue='\e[4;34m'        # Blue
-UPurple='\e[4;35m'      # Purple
-UCyan='\e[4;36m'        # Cyan
-UWhite='\e[4;37m'       # White
+# Colors
+Black="$Default;30"
+Red="$Default;31"
+Green="$Default;32"
+Yellow="$Default;33"
+Blue="$Default;34"
+Purple="$Default;35"
+Cyan="$Default;36"
+White="$Default;37"
 
-# Background
-On_Black='\e[40m'       # Black
-On_Red='\e[41m'         # Red
-On_Green='\e[42m'       # Green
-On_Yellow='\e[43m'      # Yellow
-On_Blue='\e[44m'        # Blue
-On_Purple='\e[45m'      # Purple
-On_Cyan='\e[46m'        # Cyan
-On_White='\e[47m'       # White
+# Bold Colors
+BBlack="$Bold;30"
+BRed="$Bold;31"
+BGreen="$Bold;32"
+BYellow="$Bold;33"
+BBlue="$Bold;34"
+BPurple="$Bold;35"
+BCyan="$Bold;36"
+BWhite="$Bold;37"
 
-# High Intensity
-IBlack='\e[0;90m'       # Black
-IRed='\e[0;91m'         # Red
-IGreen='\e[0;92m'       # Green
-IYellow='\e[0;93m'      # Yellow
-IBlue='\e[0;94m'        # Blue
-IPurple='\e[0;95m'      # Purple
-ICyan='\e[0;96m'        # Cyan
-IWhite='\e[0;97m'       # White
+# High Intensity Colors
+IBlack="$Default;90"
+IRed="$Default;91"
+IGreen="$Default;92"
+IYellow="$Default;93"
+IBlue="$Default;94"
+IPurple="$Default;95"
+ICyan="$Default;96"
+IWhite="$Default;97"
 
 # Bold High Intensity
-BIBlack='\e[1;90m'      # Black
-BIRed='\e[1;91m'        # Red
-BIGreen='\e[1;92m'      # Green
-BIYellow='\e[1;93m'     # Yellow
-BIBlue='\e[1;94m'       # Blue
-BIPurple='\e[1;95m'     # Purple
-BICyan='\e[1;96m'       # Cyan
-BIWhite='\e[1;97m'      # White
+BIBlack="$Bold;90"
+BIRed="$Bold;91"
+BIGreen="$Bold;92"
+BIYellow="$Bold;93"
+BIBlue="$Bold;94"
+BIPurple="$Bold;95"
+BICyan="$Bold;96"
+BIWhite="$Bold;97"
+
+# Backgrounds
+On_Black='40'
+On_Red='41'
+On_Green='42'
+On_Yellow='43'
+On_Blue='44'
+On_Purple='45'
+On_Cyan='46'
+On_White='47'
 
 # High Intensity backgrounds
-On_IBlack='\e[0;100m'   # Black
-On_IRed='\e[0;101m'     # Red
-On_IGreen='\e[0;102m'   # Green
-On_IYellow='\e[0;103m'  # Yellow
-On_IBlue='\e[0;104m'    # Blue
-On_IPurple='\e[0;105m'  # Purple
-On_ICyan='\e[0;106m'    # Cyan
-On_IWhite='\e[0;107m'   # White
+On_IBlack='100'
+On_IRed='101'
+On_IGreen='102'
+On_IYellow='103'
+On_IBlue='104'
+On_IPurple='105'
+On_ICyan='106'
+On_IWhite='107'
 
-export PS1="\[$BIBlue\]\u\[$White\]@\[$Yellow\]\h\[$White\]:\[$Purple\]\w\[$Cyan\]\$(__git_ps1 '(%s)') \[$Color_Off"$'\n\$ '
+ps1s='\e['
+ps1e='m'
 
-LS_COLORS='di=4;40;33'
+# Command prompt color and format
+export PS1="\[$ps1s$BIBlue$ps1e\]\u\[$ps1s$White$ps1e\]@\[$ps1s$Yellow$ps1e\]\h\[$ps1s$White$ps1e\]:\[$ps1s$Purple$ps1e\]\w\[$ps1s$Cyan$ps1e\]\$(__git_ps1 '(%s)') \[$ps1s$Default$ps1e"$'\n\$ '
+
+# export PS1="\[$BIBlue\]\u\[$White\]@\[$Yellow\]\h\[$White\]:\[$Purple\]\w\[$Cyan\]\$(__git_ps1 '(%s)') \[$Color_Off"$'\n\$ '
+
+# Set color scheme of directory for command 'ls'
+#   di    directory
+#   fi    file
+#   ln    symbolic link
+#   pi    fifo file
+#   so    socket file
+#   bd    block (buffered) special file
+#   cd    character (unbuffered) special file
+#   or    symbolic link pointing to a non-existent file (orphan)
+#   mi    non-existent file pointed to by a symbolic link (visible when you type ls -l)
+#   ex    file which is executable (has 'x' set in permissions).
+LS_COLORS="di=$Yellow;$Underline;$On_Black:or=$BBlack;$On_Red:ln=$BCyan"
 export LS_COLORS
+
 # See man bash for more options...
 #
 # Don't wait for job termination notification
 # set -o notify
+
 #
 # Don't use ^D to exit
 # set -o ignoreeof
@@ -245,13 +334,13 @@ alias grhard='git reset --hard'
 # Some example functions:
 #
 # a) function settitle
-# settitle () 
-# { 
-#   echo -ne "\e]2;$@\a\e]1;$@\a"; 
+# settitle ()
+# {
+#   echo -ne "\e]2;$@\a\e]1;$@\a";
 # }
-# 
+#
 # b) function cd_func
-# This function defines a 'cd' replacement function capable of keeping, 
+# This function defines a 'cd' replacement function capable of keeping,
 # displaying and accessing history of visited directories, up to 10 entries.
 # To use it, uncomment it, source this file and try 'cd --'.
 # acd_func 1.0.5, 10-nov-2004
@@ -260,15 +349,15 @@ alias grhard='git reset --hard'
 # {
 #   local x2 the_new_dir adir index
 #   local -i cnt
-# 
+#
 #   if [[ $1 ==  "--" ]]; then
 #     dirs -v
 #     return 0
 #   fi
-# 
+#
 #   the_new_dir=$1
 #   [[ -z $1 ]] && the_new_dir=$HOME
-# 
+#
 #   if [[ ${the_new_dir:0:1} == '-' ]]; then
 #     #
 #     # Extract dir N from dirs
@@ -278,21 +367,21 @@ alias grhard='git reset --hard'
 #     [[ -z $adir ]] && return 1
 #     the_new_dir=$adir
 #   fi
-# 
+#
 #   #
 #   # '~' has to be substituted by ${HOME}
 #   [[ ${the_new_dir:0:1} == '~' ]] && the_new_dir="${HOME}${the_new_dir:1}"
-# 
+#
 #   #
 #   # Now change to the new dir and add to the top of the stack
 #   pushd "${the_new_dir}" > /dev/null
 #   [[ $? -ne 0 ]] && return 1
 #   the_new_dir=$(pwd)
-# 
+#
 #   #
 #   # Trim down everything beyond 11th entry
 #   popd -n +11 2>/dev/null 1>/dev/null
-# 
+#
 #   #
 #   # Remove any other occurence of this dir, skipping the top of the stack
 #   for ((cnt=1; cnt <= 10; cnt++)); do
@@ -304,10 +393,10 @@ alias grhard='git reset --hard'
 #       cnt=cnt-1
 #     fi
 #   done
-# 
+#
 #   return 0
 # }
-# 
+#
 # alias cd=cd_func
 
 # Note: ~/.ssh/environment should not be used, as it
