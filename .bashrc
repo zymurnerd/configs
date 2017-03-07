@@ -302,6 +302,7 @@ alias gf='git fetch'
 alias gl='git pull'
 alias gp='git push'
 alias gd='git diff | mate'
+alias gdiffci='git diff-tree --name-only -r'  # show all changed files in a commit--needs branch or hash
 alias gau='git add --update'
 alias gci='git commit'
 alias gca='git commit -a'
