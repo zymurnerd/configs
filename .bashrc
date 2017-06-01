@@ -313,6 +313,7 @@ alias gco='git checkout'
 alias gcob='git checkout -b'
 alias glog='git log'
 alias glogp='git log --pretty=format:"%h %s" --graph'
+alias gmash='git merge --squash'
 alias gsu='git submodule update --init --recursive'
 alias gpsu='git submodule update --recursive --remote' # pull all submdules to origin/master
 alias grhard='git reset --hard'
