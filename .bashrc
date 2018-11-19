@@ -317,6 +317,8 @@ alias gmash='git merge --squash'
 alias gsu='git submodule update --init --recursive'
 alias gpsu='git submodule update --recursive --remote' # pull all submdules to origin/master
 alias grhard='git reset --hard'
+alias gwip='git commit -a -m wip'
+alias gcap='git branch | cut -c3- | grep arcpatch- | xargs -n1 git branch -D'
 
 # Umask
 #
