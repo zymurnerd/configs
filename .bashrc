@@ -31,7 +31,7 @@
 
 # source ~/git-completion.bash
 # source ~/git-prompt.sh
-source ~/configs/git-prompt.sh
+source ~/Configs/git-prompt.sh
 
 
 # Shell Options
