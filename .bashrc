@@ -297,6 +297,7 @@ alias l='ls -CF'                              #
 alias lh='ls -lh'
 
 # git alias
+alias gaa='git add -A'
 alias gst='git status'
 alias gf='git fetch'
 alias gl='git pull'
