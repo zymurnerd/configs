@@ -298,11 +298,12 @@ alias lh='ls -lh'
 
 # git alias
 alias gst='git status'
-alias gf='git fetch'
+alias gf='git fetch --all'
 alias gl='git pull'
 alias gp='git push'
 alias gd='git diff | mate'
 alias gdiffci='git diff-tree --name-only -r'  # show all changed files in a commit--needs branch or hash
+alias gaa='git add -A'
 alias gau='git add --update'
 alias gci='git commit'
 alias gca='git commit -a'
@@ -319,6 +320,9 @@ alias gpsu='git submodule update --recursive --remote' # pull all submdules to o
 alias grhard='git reset --hard'
 alias gwip='git commit -a -m wip'
 alias gcap='git branch | cut -c3- | grep arcpatch- | xargs -n1 git branch -D'
+
+# Homebrew
+eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 
 # Umask
 #
@@ -456,3 +460,19 @@ unset env
 if [ -f $HOME/.bashrc_local ]; then
     . $HOME/.bashrc_local
 fi
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/wesley/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/wesley/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/wesley/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/wesley/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+

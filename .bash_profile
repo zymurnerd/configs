@@ -23,6 +23,8 @@
 
 # User dependent .bash_profile file
 
+eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+
 # source the users bashrc if it exists
 if [ -f "${HOME}/.bashrc" ] ; then
   source "${HOME}/.bashrc"
